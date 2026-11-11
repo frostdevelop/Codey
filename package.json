@@ -1,0 +1,28 @@
+{
+  "name": "codey-build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild editor-js.js --bundle --outfile=bundle-js.js --minify && esbuild editor-rust.js --bundle --outfile=bundle-rust.js --minify && esbuild editor-html.js --bundle --outfile=bundle-html.js --minify",
+    "buildvim": "esbuild editor-js-vim.js --bundle --outfile=bundle-js-vim.js --minify && esbuild editor-rust-vim.js --bundle --outfile=bundle-rust-vim.js --minify && esbuild editor-html-vim.js --bundle --outfile=bundle-html-vim.js --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@babel/runtime": "^8.0.0",
+    "@codemirror/lang-html": "^6.4.11",
+    "@codemirror/lang-java": "^6.0.2",
+    "@codemirror/lang-javascript": "^6.2.5",
+    "@codemirror/lang-rust": "^6.0.2",
+    "@replit/codemirror-vim": "^6.4.0",
+    "@uiw/codemirror-theme-xcode": "^4.25.12",
+    "codemirror": "^6.0.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
+  }
+}
